@@ -9,7 +9,7 @@ class Solution{
         for (int num : nums) {
             set.add(num);
         }
-        int longestStreak = 0;
+        int longestSequence = 0;
         for (int num : set) {
             if (!set.contains(num - 1)) {
                 int currentNum = num;
@@ -19,10 +19,10 @@ class Solution{
                     currentNum++;
                     currentStreak++;
                 }
-                longestStreak = Math.max(longestStreak, currentStreak);
+                longestSequence = Math.max(longestSequence, currentStreak);
             }
         }
 
-        return longestStreak;
+        return longestSequence;
     }
 }
